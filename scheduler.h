@@ -12,9 +12,10 @@
 
 class Scheduler {
 private:
-	SMD5050LEDStrip * strips;
+	SMD5050LEDStrip **strips;
+	unsigned int numStrips;
 public:
-	Scheduler(SMD5050LEDStrip * ledStrips);
+	Scheduler(SMD5050LEDStrip **ledStrips, unsigned int numStripsInput = 1);
 	void update();
 };
 

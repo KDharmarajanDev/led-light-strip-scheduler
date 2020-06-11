@@ -6,10 +6,7 @@
  */
 #include "color.h"
 
-Color::Color (int redInput, int greenInput, int blueInput){
-	red = redInput;
-	blue = blueInput;
-	green = greenInput;
+Color::Color (int redInput, int greenInput, int blueInput) : red(redInput), green(greenInput), blue(blueInput){
 }
 
 

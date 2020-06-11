@@ -13,9 +13,9 @@ class RandomGenerator : public SequentialGenerator {
 public:
 	RandomGenerator() : SequentialGenerator{} {
 	}
-	RandomGenerator(LEDState * statesInput) : SequentialGenerator(statesInput) {
+	RandomGenerator(LEDState **statesInput, int numLEDStates, int startTime = 0) : SequentialGenerator(statesInput, numLEDStates, startTime) {
 	}
-	LEDState * nextState();
+	LEDState *nextState() override;
 };
 
 

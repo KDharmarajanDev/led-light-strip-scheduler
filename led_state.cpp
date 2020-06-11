@@ -6,14 +6,15 @@
  */
 #include "led_state.h"
 
-LEDState::LEDState(Color& inputColor, unsigned long durationInput){
-	color = &inputColor;
-	duration = durationInput;
-	startTime = 0;
+LEDState::LEDState() : color(nullptr), duration(0){
+
 }
 
-void LEDState::setStartTime(unsigned long startTimeInput){
-	startTime = startTimeInput;
+LEDState::LEDState(Color& inputColor, unsigned long durationInput) : color(&inputColor), duration(durationInput){
+}
+
+LEDState::~LEDState(){
+
 }
 
 

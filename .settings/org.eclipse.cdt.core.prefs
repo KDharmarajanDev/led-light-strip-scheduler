@@ -1,3 +1,8 @@
+doxygen/doxygen_new_line_after_brief=true
+doxygen/doxygen_use_brief_tag=false
+doxygen/doxygen_use_javadoc_tags=true
+doxygen/doxygen_use_pre_tag=false
+doxygen/doxygen_use_structural_commands=false
 eclipse.preferences.version=1
 environment/project/io.sloeber.core.toolChain.release.539813522/A.ALT_SIZE_COMMAND/delimiter=\:
 environment/project/io.sloeber.core.toolChain.release.539813522/A.ALT_SIZE_COMMAND/operation=replace
@@ -466,7 +471,7 @@ environment/project/io.sloeber.core.toolChain.release.539813522/JANTJE.BOARD_NAM
 environment/project/io.sloeber.core.toolChain.release.539813522/JANTJE.BOARD_NAME/value=Arduino Uno
 environment/project/io.sloeber.core.toolChain.release.539813522/JANTJE.COM_PORT/delimiter=\:
 environment/project/io.sloeber.core.toolChain.release.539813522/JANTJE.COM_PORT/operation=replace
-environment/project/io.sloeber.core.toolChain.release.539813522/JANTJE.COM_PORT/value=
+environment/project/io.sloeber.core.toolChain.release.539813522/JANTJE.COM_PORT/value=/dev/cu.usbmodem143301
 environment/project/io.sloeber.core.toolChain.release.539813522/JANTJE.ECLIPSE_LOCATION/delimiter=\:
 environment/project/io.sloeber.core.toolChain.release.539813522/JANTJE.ECLIPSE_LOCATION/operation=replace
 environment/project/io.sloeber.core.toolChain.release.539813522/JANTJE.ECLIPSE_LOCATION/value=

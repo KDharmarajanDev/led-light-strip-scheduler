@@ -13,17 +13,18 @@
 class TransitionLEDState : public LEDState {
 
 private:
-	Color & endColor;
-	Color & changeColor;
+	Color &endColor;
+	Color changeColor;
+	Color currentColor;
 
 public:
 	TransitionLEDState(Color & startColor, Color & endColor, unsigned long durationTime) :
-		LEDState{startColor, durationTime}, endColor{endColor}{
+		LEDState(startColor, durationTime), endColor(endColor), currentColor(startColor){
 			changeColor = Color(endColor.getRed() - startColor.getRed(),
 				endColor.getBlue() - startColor.getBlue(),
 				endColor.getGreen() - startColor.getGreen());
 		};
-	Color getColor(unsigned long currentTime = 0);
+	Color getColor(unsigned long currentTime = 0) override;
 };
 
 

@@ -14,23 +14,20 @@ class LEDState {
 private:
 	Color* color;
 	unsigned long duration;
-	unsigned long startTime;
 
 public:
+	LEDState();
+
 	LEDState(Color& inputColor, unsigned long durationInput = 0);
 	unsigned long getDuration(){
 		return duration;
 	}
 
-	Color getColor(unsigned long currentTime){
+	virtual Color getColor(unsigned long currentTime=0){
 		return *color;
 	}
 
-	void setStartTime(unsigned long startTimeInput);
-
-	unsigned long getStartTime(){
-		return startTime;
-	}
+	virtual ~LEDState();
 };
 
 
