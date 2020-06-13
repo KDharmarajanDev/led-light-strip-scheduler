@@ -12,6 +12,5 @@ LEDState * RandomGenerator::nextState(){
 	int desiredIndex = random(0, SequentialGenerator::getEndStateIndex()+1);
 	SequentialGenerator::setStartTime((unsigned long)millis());
 	SequentialGenerator::setCurrentIndex(desiredIndex);
-	Serial.println((String) desiredIndex);
 	return SequentialGenerator::getState(desiredIndex);
 }

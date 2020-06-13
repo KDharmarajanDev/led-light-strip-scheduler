@@ -18,14 +18,15 @@ private:
 	int redPin;
 	int bluePin;
 	int greenPin;
-	SequentialGenerator *generator;
-
+	SequentialGenerator **generators;
+	int currentGeneratorIndex;
+	int endGeneratorIndex;
 
 public:
-	SMD5050LEDStrip(int redPinInput = 0, int bluePinInput = 0, int greenPinInput = 0);
-	void changeColor(Color& color);
+	SMD5050LEDStrip(int redPinInput, int bluePinInput, int greenPinInput, SequentialGenerator **generators, int numGenerators);
+	void changeColor(const Color& color);
 	SequentialGenerator *getSequentialGenerator();
-	void setSequentialGenerator(SequentialGenerator *generatorInput);
+	void moveAlongSequentialGenerator(int amount);
 };
 
 

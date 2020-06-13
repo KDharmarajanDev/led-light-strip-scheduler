@@ -23,7 +23,7 @@ public:
 		return duration;
 	}
 
-	virtual Color getColor(unsigned long currentTime=0){
+	virtual Color getColor(long currentTime=0){
 		return *color;
 	}
 

@@ -9,7 +9,7 @@
 #include <math.h>
 #include <Arduino.h>
 
-Color TransitionLEDState::getColor(unsigned long currentTime){
+Color TransitionLEDState::getColor(long currentTime){
 	double multiplierRatio = ((double) currentTime)/LEDState::getDuration();
 	currentColor = Color(floor(LEDState::getColor().getRed() + multiplierRatio * changeColor.getRed())
 			,floor(LEDState::getColor().getGreen() + multiplierRatio * changeColor.getGreen())

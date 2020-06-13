@@ -14,9 +14,9 @@ private:
     int blue;
 public:
     Color(int red = 0, int green = 0, int blue = 0);
-    int getRed() { return red; }
-    int getBlue() { return blue; }
-    int getGreen()  { return green; }
+    const int getRed() const { return red; }
+    const int getBlue() const { return blue; }
+    const int getGreen() const  { return green; }
 };
 
 
