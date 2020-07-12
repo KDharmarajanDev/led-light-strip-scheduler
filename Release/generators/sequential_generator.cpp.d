@@ -1,5 +1,7 @@
-generator_cycler.cpp.o: ../generator_cycler.cpp ../generator_cycler.h \
- ../advanced_button.h ../SMD5050LEDStrip.h \
+generators/sequential_generator.cpp.o: \
+ ../generators/sequential_generator.cpp \
+ ../generators/sequential_generator.h \
+ /Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/ledstates/led_state.h \
  /Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/ledstates/color.h \
  /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/cores/arduino/Arduino.h \
  /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/cores/arduino/binary.h \
@@ -11,16 +13,11 @@ generator_cycler.cpp.o: ../generator_cycler.cpp ../generator_cycler.h \
  /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/cores/arduino/Printable.h \
  /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/cores/arduino/USBAPI.h \
  /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/cores/arduino/Arduino.h \
- /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/variants/standard/pins_arduino.h \
- /Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/ledstates/led_state.h \
- /Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/ledstates/color.h \
- /Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/generators/sequential_generator.h
+ /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/variants/standard/pins_arduino.h
 
-../generator_cycler.h:
+../generators/sequential_generator.h:
 
-../advanced_button.h:
-
-../SMD5050LEDStrip.h:
+/Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/ledstates/led_state.h:
 
 /Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/ledstates/color.h:
 
@@ -45,9 +42,3 @@ generator_cycler.cpp.o: ../generator_cycler.cpp ../generator_cycler.h \
 /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/cores/arduino/Arduino.h:
 
 /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/variants/standard/pins_arduino.h:
-
-/Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/ledstates/led_state.h:
-
-/Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/ledstates/color.h:
-
-/Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/generators/sequential_generator.h:

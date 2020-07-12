@@ -9,14 +9,13 @@
 #define ANDROID_MESSAGE_HANDLER_H_
 
 #include "Arduino.h"
+#include "android_message.h"
 
 class AndroidMessageHandler{
 
-private:
-	int bluetoothRXPin;
-
 public:
-	AndroidMessageHandler(int bluetoothPin = 0);
+	AndroidMessageHandler();
+	static void handleMessage(String &message);
 };
 
 

@@ -7,6 +7,8 @@
 #ifndef COLOR_H_
 #define COLOR_H_
 
+#include <Arduino.h>
+
 class Color {
 private:
     int red;
@@ -14,9 +16,11 @@ private:
     int blue;
 public:
     Color(int red = 0, int green = 0, int blue = 0);
-    const int getRed() const { return red; }
-    const int getBlue() const { return blue; }
-    const int getGreen() const  { return green; }
+    int getRed() const { return red; }
+    int getBlue() const { return blue; }
+    int getGreen() const  { return green; }
+    bool operator==(const Color& other);
+    String serialize();
 };
 
 

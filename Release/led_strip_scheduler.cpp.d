@@ -11,9 +11,16 @@ led_strip_scheduler.cpp.o: ../led_strip_scheduler.cpp \
  /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/cores/arduino/USBAPI.h \
  /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/cores/arduino/Arduino.h \
  /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/variants/standard/pins_arduino.h \
- ../scheduler.h ../SMD5050LEDStrip.h ../color.h ../led_state.h \
- ../sequential_generator.h ../random_generator.h \
- ../transition_led_state.h ../generator_cycler.h ../advanced_button.h
+ ../scheduler.h ../SMD5050LEDStrip.h \
+ /Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/ledstates/color.h \
+ /Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/ledstates/led_state.h \
+ /Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/ledstates/color.h \
+ /Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/generators/sequential_generator.h \
+ /Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/generators/random_generator.h \
+ /Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/generators/sequential_generator.h \
+ /Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/ledstates/transition_led_state.h \
+ /Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/ledstates/led_state.h \
+ ../generator_cycler.h ../advanced_button.h
 
 ../led_strip_scheduler.h:
 
@@ -43,15 +50,21 @@ led_strip_scheduler.cpp.o: ../led_strip_scheduler.cpp \
 
 ../SMD5050LEDStrip.h:
 
-../color.h:
+/Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/ledstates/color.h:
 
-../led_state.h:
+/Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/ledstates/led_state.h:
 
-../sequential_generator.h:
+/Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/ledstates/color.h:
 
-../random_generator.h:
+/Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/generators/sequential_generator.h:
 
-../transition_led_state.h:
+/Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/generators/random_generator.h:
+
+/Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/generators/sequential_generator.h:
+
+/Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/ledstates/transition_led_state.h:
+
+/Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/ledstates/led_state.h:
 
 ../generator_cycler.h:
 

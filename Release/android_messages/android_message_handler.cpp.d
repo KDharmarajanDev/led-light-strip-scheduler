@@ -11,7 +11,9 @@ android_messages/android_message_handler.cpp.o: \
  /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/cores/arduino/Printable.h \
  /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/cores/arduino/USBAPI.h \
  /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/cores/arduino/Arduino.h \
- /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/variants/standard/pins_arduino.h
+ /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/variants/standard/pins_arduino.h \
+ ../android_messages/android_message.h \
+ ../android_messages/led_strip_info_message.h
 
 ../android_messages/android_message_handler.h:
 
@@ -36,3 +38,7 @@ android_messages/android_message_handler.cpp.o: \
 /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/cores/arduino/Arduino.h:
 
 /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/variants/standard/pins_arduino.h:
+
+../android_messages/android_message.h:
+
+../android_messages/led_strip_info_message.h:

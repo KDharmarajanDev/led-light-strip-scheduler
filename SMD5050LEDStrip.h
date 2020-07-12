@@ -11,6 +11,7 @@
 #include "color.h"
 #include "led_state.h"
 #include "sequential_generator.h"
+#include <Arduino.h>
 
 class SMD5050LEDStrip {
 
@@ -27,6 +28,11 @@ public:
 	void changeColor(const Color& color);
 	SequentialGenerator *getSequentialGenerator();
 	void moveAlongSequentialGenerator(int amount);
+	String serialize();
+	int getRedPin();
+	int getGreenPin();
+	int getBluePin();
+	~SMD5050LEDStrip();
 };
 
 

@@ -1,5 +1,7 @@
-random_generator.cpp.o: ../random_generator.cpp ../random_generator.h \
- ../sequential_generator.h ../led_state.h ../color.h \
+ledstates/transition_led_state.cpp.o: \
+ ../ledstates/transition_led_state.cpp \
+ ../ledstates/transition_led_state.h ../ledstates/led_state.h \
+ ../ledstates/color.h \
  /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/cores/arduino/Arduino.h \
  /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/cores/arduino/binary.h \
  /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/cores/arduino/WCharacter.h \
@@ -12,13 +14,11 @@ random_generator.cpp.o: ../random_generator.cpp ../random_generator.h \
  /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/cores/arduino/Arduino.h \
  /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/variants/standard/pins_arduino.h
 
-../random_generator.h:
+../ledstates/transition_led_state.h:
 
-../sequential_generator.h:
+../ledstates/led_state.h:
 
-../led_state.h:
-
-../color.h:
+../ledstates/color.h:
 
 /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/cores/arduino/Arduino.h:
 

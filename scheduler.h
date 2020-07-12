@@ -13,10 +13,15 @@
 class Scheduler {
 private:
 	SMD5050LEDStrip **strips;
-	unsigned int numStrips;
+	int numStrips;
 public:
-	Scheduler(SMD5050LEDStrip **ledStrips, unsigned int numStripsInput = 1);
+	Scheduler(SMD5050LEDStrip **ledStrips, int numStripsInput = 1);
 	void update();
+	SMD5050LEDStrip *getStrip(int index);
+	Scheduler(const Scheduler& other);
+	Scheduler& operator=(const Scheduler& other);
+	void destroy();
+	~Scheduler();
 };
 
 

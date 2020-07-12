@@ -9,25 +9,24 @@
 #define SCHEDULER_LED_STATE_H_
 
 #include "color.h"
+#include <Arduino.h>
 
 class LEDState {
 private:
-	Color* color;
+	Color color;
 	unsigned long duration;
 
 public:
 	LEDState();
-
-	LEDState(Color& inputColor, unsigned long durationInput = 0);
+	LEDState(Color inputColor, unsigned long durationInput = 0);
 	unsigned long getDuration(){
 		return duration;
 	}
-
 	virtual Color getColor(long currentTime=0){
-		return *color;
+		return color;
 	}
-
 	virtual ~LEDState();
+	virtual String serialize();
 };
 
 

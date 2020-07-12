@@ -32,3 +32,39 @@ void SMD5050LEDStrip::moveAlongSequentialGenerator(int amount){
 		currentGeneratorIndex+=amount;
 	}
 }
+
+int SMD5050LEDStrip::getRedPin(){
+	return redPin;
+}
+
+int SMD5050LEDStrip::getBluePin(){
+	return bluePin;
+}
+
+int SMD5050LEDStrip::getGreenPin(){
+	return greenPin;
+}
+
+String SMD5050LEDStrip::serialize(){
+	String answer = "[";
+	answer+= redPin;
+	answer+= ",";
+	answer+= greenPin;
+	answer+= ",";
+	answer+= bluePin;
+	for(int i = 0; i <= endGeneratorIndex; i++){
+		answer+=",";
+	    answer+=generators[i]->serialize();
+	}
+	answer+="]";
+	return answer;
+}
+
+SMD5050LEDStrip::~SMD5050LEDStrip(){
+	for(int i = 0; i <= endGeneratorIndex; i++){
+		if(generators[i] != nullptr){
+			delete generators[i];
+		}
+	}
+	delete[] generators;
+}

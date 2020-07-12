@@ -37,4 +37,6 @@ SUBDIRS := \
 . \
 android_messages \
 core/core \
+generators \
+ledstates \
 

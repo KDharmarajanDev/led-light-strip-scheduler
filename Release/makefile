@@ -9,6 +9,8 @@ RM := rm
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include subdir.mk
+-include ledstates/subdir.mk
+-include generators/subdir.mk
 -include core/core/subdir.mk
 -include android_messages/subdir.mk
 -include objects.mk

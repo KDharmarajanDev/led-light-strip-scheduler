@@ -9,6 +9,7 @@
 AndroidMessage::AndroidMessage(String inputMessage) : message(inputMessage){
 }
 
-String & AndroidMessage::getMessage(){
+String &AndroidMessage::getMessage(){
 	return message;
 }
+

@@ -1,5 +1,4 @@
-sequential_generator.cpp.o: ../sequential_generator.cpp \
- ../sequential_generator.h ../led_state.h ../color.h \
+ledstates/color.cpp.o: ../ledstates/color.cpp ../ledstates/color.h \
  /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/cores/arduino/Arduino.h \
  /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/cores/arduino/binary.h \
  /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/cores/arduino/WCharacter.h \
@@ -12,11 +11,7 @@ sequential_generator.cpp.o: ../sequential_generator.cpp \
  /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/cores/arduino/Arduino.h \
  /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/variants/standard/pins_arduino.h
 
-../sequential_generator.h:
-
-../led_state.h:
-
-../color.h:
+../ledstates/color.h:
 
 /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/cores/arduino/Arduino.h:
 

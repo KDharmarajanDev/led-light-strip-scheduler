@@ -1,5 +1,7 @@
-transition_led_state.cpp.o: ../transition_led_state.cpp \
- ../transition_led_state.h ../led_state.h ../color.h \
+android_messages/led_strip_info_message.cpp.o: \
+ ../android_messages/led_strip_info_message.cpp \
+ ../android_messages/led_strip_info_message.h \
+ ../android_messages/android_message.h \
  /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/cores/arduino/Arduino.h \
  /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/cores/arduino/binary.h \
  /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/cores/arduino/WCharacter.h \
@@ -12,11 +14,9 @@ transition_led_state.cpp.o: ../transition_led_state.cpp \
  /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/cores/arduino/Arduino.h \
  /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/variants/standard/pins_arduino.h
 
-../transition_led_state.h:
+../android_messages/led_strip_info_message.h:
 
-../led_state.h:
-
-../color.h:
+../android_messages/android_message.h:
 
 /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/cores/arduino/Arduino.h:
 

@@ -17,12 +17,10 @@ private:
 
 public:
 	AndroidMessage(String inputMessage);
-	String & getMessage();
-	virtual void deserialize(AndroidMessage &other) = 0;
+	String &getMessage();
+	virtual AndroidMessage* deserialize(String &other) = 0;
+	virtual void handle() = 0;
 	virtual ~AndroidMessage();
-	enum MessageType {
-		ADD, DELETE, SWITCH, GET_GENERATORS, GET_LED_STRIPS
-	};
 };
 
 #endif /* ANDROID_MESSAGES_ANDROID_MESSAGE_H_ */

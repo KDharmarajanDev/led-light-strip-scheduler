@@ -9,6 +9,7 @@
 #define SCHEDULER_LED_STATE_GENERATORS_SEQUENTIAL_GENERATOR_H_
 
 #include "led_state.h"
+#include <Arduino.h>
 
 class SequentialGenerator {
 private:
@@ -29,7 +30,11 @@ public:
 	void setCurrentIndex(int index = 0);
 	void setStartTime(unsigned long startTime);
 	unsigned long getStartTime();
+	SequentialGenerator(const SequentialGenerator& other);
+	SequentialGenerator& operator=(const SequentialGenerator& other);
+	void destroy();
 	virtual ~SequentialGenerator();
+	virtual String serialize();
 };
 
 

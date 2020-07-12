@@ -13,18 +13,19 @@
 class TransitionLEDState : public LEDState {
 
 private:
-	Color &endColor;
+	Color endColor;
 	Color changeColor;
 	Color currentColor;
 
 public:
-	TransitionLEDState(Color & startColor, Color & endColor, long durationTime) :
+	TransitionLEDState(Color startColor, Color endColor, long durationTime) :
 		LEDState(startColor, durationTime), endColor(endColor), currentColor(startColor){
 			changeColor = Color(endColor.getRed() - startColor.getRed(),
 				endColor.getGreen() - startColor.getGreen(),
 				endColor.getBlue() - startColor.getBlue());
 		};
 	Color getColor(long currentTime = 0) override;
+	String serialize() override;
 };
 
 

@@ -29,5 +29,15 @@ void GeneratorCycler::update(){
 	}
 }
 
+GeneratorCycler::~GeneratorCycler(){
+	if(strips != nullptr){
+		for(int i = 0; i < numStrips; i++){
+			if(strips[i] != nullptr){
+				delete strips[i];
+			}
+		}
+		delete[] strips;
+	}
+}
 
 

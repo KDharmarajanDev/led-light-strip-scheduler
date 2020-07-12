@@ -55,7 +55,54 @@ unsigned long SequentialGenerator::getStartTime(){
 	return lastStateStartTime;
 }
 
-SequentialGenerator::~SequentialGenerator(){
+String SequentialGenerator::serialize(){
+	String answer = "[0";
+	for(int i = 0; i <= endStateIndex; i++){
+		answer+=",";
+		answer+=states[i]->serialize();
+	}
+	answer+="]";
+	return answer;
 }
+
+SequentialGenerator::SequentialGenerator(const SequentialGenerator& other){
+	lastStateStartTime = other.lastStateStartTime;
+	currentStateIndex = other.currentStateIndex;
+	endStateIndex = other.endStateIndex;
+	states = new LEDState*[endStateIndex+1];
+	for(int i = 0; i < endStateIndex+1; i++){
+		*states[i] = *other.states[i];
+	}
+}
+
+SequentialGenerator& SequentialGenerator::operator=(const SequentialGenerator& other){
+	if(this != &other){
+		lastStateStartTime = other.lastStateStartTime;
+		currentStateIndex = other.currentStateIndex;
+		endStateIndex = other.endStateIndex;
+		destroy();
+		states = new LEDState*[endStateIndex+1];
+		for(int i = 0; i < endStateIndex+1; i++){
+			states[i] = new LEDState();
+			*states[i] = *other.states[i];
+		}
+	}
+	return *this;
+}
+
+void SequentialGenerator::destroy(){
+	for(int i = 0; i < endStateIndex+1; i++){
+		if(states[i] != nullptr){
+			delete states[i];
+		}
+	}
+	delete[] states;
+}
+
+SequentialGenerator::~SequentialGenerator(){
+	destroy();
+}
+
+
 
 

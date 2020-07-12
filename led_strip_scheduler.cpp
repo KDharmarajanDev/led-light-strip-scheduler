@@ -9,17 +9,26 @@
 
 Scheduler *scheduler;
 GeneratorCycler *cycler;
+String recentMessage = "";
+
+
+int freeRAM() {
+  extern int __heap_start, *__brkval;
+  int v;
+  return (int) &v - (__brkval == 0 ? (int) &__heap_start : (int) __brkval);
+}
+
 
 void setup() {
 	Serial.begin(9600);
-	Serial.println("Starting LED Scheduler!");
+	Serial.println(F("Starting LED Scheduler!"));
 	//First strip
-	Color *redColor = new Color(255,0,0);
-	LEDState *redState = new LEDState(*redColor, 5000);
-	Color *blueColor = new Color(0,0,255);
-	LEDState *blueState = new LEDState(*blueColor,5000);
-	Color *whiteColor = new Color(255,255,255);
-	LEDState *whiteState = new LEDState(*whiteColor,5000);
+	Color redColor(255,0,0);
+	LEDState *redState = new LEDState(redColor, 5000);
+	Color blueColor(0,0,255);
+	LEDState *blueState = new LEDState(blueColor,5000);
+	Color whiteColor(255,255,255);
+	LEDState *whiteState = new LEDState(whiteColor,5000);
 	LEDState **redWhiteBlueStates = new LEDState*[3];
 	redWhiteBlueStates[0] = redState;
 	redWhiteBlueStates[1] = blueState;
@@ -30,10 +39,12 @@ void setup() {
 	SMD5050LEDStrip *stripOne = new SMD5050LEDStrip(11,10,9,generatorsStripOne,1);
 
 	//Second strip
-	TransitionLEDState *transitionFromWhiteToBlue = new TransitionLEDState(*whiteColor, *blueColor, 5000);
+	LEDState *redState2 = new LEDState(redColor, 5000);
+	LEDState *whiteState2 = new LEDState(whiteColor,5000);
+	TransitionLEDState *transitionFromWhiteToBlue = new TransitionLEDState(whiteColor, blueColor, 5000);
 	LEDState **redWhiteTransitionBlue = new LEDState*[3];
-	redWhiteTransitionBlue[0] = redState;
-	redWhiteTransitionBlue[1] = whiteState;
+	redWhiteTransitionBlue[0] = redState2;
+	redWhiteTransitionBlue[1] = whiteState2;
 	redWhiteTransitionBlue[2] = transitionFromWhiteToBlue;
 	RandomGenerator *randomGen2 = new RandomGenerator(redWhiteTransitionBlue, 3, 0);
 	SequentialGenerator **generatorsStripTwo = new SequentialGenerator*[1];
@@ -51,6 +62,23 @@ void setup() {
 }
 
 void loop() {
-	scheduler->update();
-	cycler->update();
+	if(scheduler != NULL){
+		scheduler->update();
+		cycler->update();
+	}
+	while(Serial.available()){
+		recentMessage += Serial.readString();
+		delay(10);
+	}
+	if(recentMessage != ""){
+		if(recentMessage == "SER"){
+			Serial.println(scheduler->getStrip(0)->serialize());
+		} else if(recentMessage == "RAM"){
+			Serial.println(freeRAM());
+		}
+		recentMessage = "";
+	}
 }
+
+
+

@@ -17,5 +17,15 @@ Color TransitionLEDState::getColor(long currentTime){
 	return currentColor;
 }
 
+String TransitionLEDState::serialize(){
+	String answer = "[";
+	answer+=LEDState::getDuration();
+	answer+=",";
+	answer+=LEDState::getColor(0).serialize();
+	answer+=",";
+	answer+=endColor.serialize();
+	answer+="]";
+    return answer;
+}
 
 

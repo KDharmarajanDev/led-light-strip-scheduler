@@ -9,6 +9,8 @@
 #define SCHEDULER_LED_STATE_GENERATORS_RANDOM_GENERATOR_H_
 
 #include "sequential_generator.h"
+#include <Arduino.h>
+
 class RandomGenerator : public SequentialGenerator {
 public:
 	RandomGenerator() : SequentialGenerator{} {
@@ -16,6 +18,7 @@ public:
 	RandomGenerator(LEDState **statesInput, int numLEDStates, int startTime = 0) : SequentialGenerator(statesInput, numLEDStates, startTime) {
 	}
 	LEDState *nextState() override;
+	String serialize() override;
 };
 
 
