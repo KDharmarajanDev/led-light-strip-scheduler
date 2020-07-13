@@ -7,6 +7,8 @@
 #include "android_message_handler.h"
 #include "android_message.h"
 #include "led_strip_info_message.h"
+#include "led_strip_scheduler.h"
+#include "get_info_message.h"
 #include <Arduino.h>
 
 AndroidMessageHandler::AndroidMessageHandler(){
@@ -20,9 +22,18 @@ static void AndroidMessageHandler::handleMessage(String &message){
 	String typeMessage = message.substring(0,index);
 	AndroidMessage *androidMessage;
 	if(typeMessage.equals("SET")){
-		LEDStripInfoMessage infoMessage(message);
-		androidMessage = &infoMessage;
+		scheduler->destroy();
+		androidMessage = LEDStripInfoMessage().deserialize(message);
+	} else if(typeMessage.equals("GET")){
+		androidMessage = new GetInfoMessage();
+	} else {
+		return;
 	}
 	androidMessage->handle();
+	delete androidMessage;
+}
+
+void AndroidMessageHandler::sendMessage(AndroidMessage *message){
+	Serial.println(message->serialize());
 }
 

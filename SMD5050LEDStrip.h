@@ -12,6 +12,7 @@
 #include "led_state.h"
 #include "sequential_generator.h"
 #include <Arduino.h>
+#include "deserializer_handler.h"
 
 class SMD5050LEDStrip {
 
@@ -32,6 +33,7 @@ public:
 	int getRedPin();
 	int getGreenPin();
 	int getBluePin();
+	static SMD5050LEDStrip* deserialize(String &input, struct indices& bounds);
 	~SMD5050LEDStrip();
 };
 

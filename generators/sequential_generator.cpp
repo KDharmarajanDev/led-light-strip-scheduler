@@ -5,8 +5,12 @@
  *      Author: karthikdharmarajan
  */
 #include "sequential_generator.h"
+#include "random_generator.h"
 #include "led_state.h"
 #include <Arduino.h>
+#include "deserializer_handler.h"
+
+typedef struct indicies indicies;
 
 SequentialGenerator::SequentialGenerator() : currentStateIndex(0), endStateIndex(0), states(), lastStateStartTime(0){
 }
@@ -99,10 +103,35 @@ void SequentialGenerator::destroy(){
 	delete[] states;
 }
 
+static SequentialGenerator* SequentialGenerator::deserialize(String &input, struct indices &bounds){
+    if(input.length() >= 3){
+        DeserializerHandler handler(input, bounds);
+        int type = handler.getNextInteger();
+        int counter = 0;
+        struct indices newBracketBounds = handler.getNextItemInBrackets();
+        while(newBracketBounds.end != newBracketBounds.start){
+            counter++;
+            newBracketBounds = handler.getNextItemInBrackets();
+        }
+        LEDState **ledStates = new LEDState*[counter];
+        handler = DeserializerHandler(input, bounds);
+        handler.getNextInteger();
+        for(int i = 0; i < counter; i++){
+        	struct indices bracketBounds = handler.getNextItemInBrackets();
+        	ledStates[i] = LEDState::deserialize(input,bracketBounds);
+        }
+        if(type == 0){
+            return new SequentialGenerator(ledStates, counter);
+        } else {
+            return new RandomGenerator(ledStates, counter);
+        }
+    }
+    return new SequentialGenerator();
+}
+
 SequentialGenerator::~SequentialGenerator(){
 	destroy();
 }
-
 
 
 

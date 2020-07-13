@@ -1,8 +1,7 @@
-generators/sequential_generator.cpp.o: \
- ../generators/sequential_generator.cpp \
- ../generators/sequential_generator.h \
- /Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/ledstates/led_state.h \
- /Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/ledstates/color.h \
+android_messages/get_info_message.cpp.o: \
+ ../android_messages/get_info_message.cpp \
+ ../android_messages/get_info_message.h \
+ ../android_messages/android_message.h \
  /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/cores/arduino/Arduino.h \
  /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/cores/arduino/binary.h \
  /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/cores/arduino/WCharacter.h \
@@ -14,14 +13,24 @@ generators/sequential_generator.cpp.o: \
  /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/cores/arduino/USBAPI.h \
  /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/cores/arduino/Arduino.h \
  /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/variants/standard/pins_arduino.h \
+ /Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/led_strip_scheduler.h \
+ /Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/scheduler.h \
+ /Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/SMD5050LEDStrip.h \
+ /Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/ledstates/color.h \
  /Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/android_messages/deserializer_handler.h \
- ../generators/random_generator.h
+ /Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/ledstates/led_state.h \
+ /Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/ledstates/color.h \
+ /Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/generators/sequential_generator.h \
+ /Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/android_messages/android_message_handler.h \
+ /Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/android_messages/android_message.h \
+ /Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/generator_cycler.h \
+ /Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/advanced_button.h \
+ ../android_messages/led_strip_info_message.h \
+ /Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/SMD5050LEDStrip.h
 
-../generators/sequential_generator.h:
+../android_messages/get_info_message.h:
 
-/Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/ledstates/led_state.h:
-
-/Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/ledstates/color.h:
+../android_messages/android_message.h:
 
 /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/cores/arduino/Arduino.h:
 
@@ -45,6 +54,30 @@ generators/sequential_generator.cpp.o: \
 
 /Applications/Eclipse.app/Contents/Eclipse/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/variants/standard/pins_arduino.h:
 
+/Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/led_strip_scheduler.h:
+
+/Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/scheduler.h:
+
+/Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/SMD5050LEDStrip.h:
+
+/Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/ledstates/color.h:
+
 /Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/android_messages/deserializer_handler.h:
 
-../generators/random_generator.h:
+/Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/ledstates/led_state.h:
+
+/Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/ledstates/color.h:
+
+/Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/generators/sequential_generator.h:
+
+/Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/android_messages/android_message_handler.h:
+
+/Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/android_messages/android_message.h:
+
+/Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/generator_cycler.h:
+
+/Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/advanced_button.h:
+
+../android_messages/led_strip_info_message.h:
+
+/Users/karthikdharmarajan/eclipse-workspace/led_strip_scheduler/SMD5050LEDStrip.h:

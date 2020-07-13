@@ -9,15 +9,24 @@
 #define ANDROID_MESSAGES_LED_STRIP_INFO_MESSAGE_H_
 
 #include "android_message.h"
+#include "SMD5050LEDStrip.h"
 
 class LEDStripInfoMessage : public AndroidMessage {
 
-public:
-	LEDStripInfoMessage(String &message) : AndroidMessage(message){
-	}
+	SMD5050LEDStrip** strips;
+	int numStrips;
 
-	LEDStripInfoMessage* deserialize(String& other) override;
+public:
+	LEDStripInfoMessage(SMD5050LEDStrip** strips, int numStrips) : strips(strips), numStrips(numStrips){
+	}
+	LEDStripInfoMessage(){
+		strips = nullptr;
+		numStrips = 0;
+	}
+	AndroidMessage* deserialize(String &other) override;
 	void handle() override;
+	SMD5050LEDStrip** getStrips();
+	String serialize() override;
 
 };
 

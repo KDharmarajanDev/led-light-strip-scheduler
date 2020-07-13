@@ -16,6 +16,7 @@ class AndroidMessageHandler{
 public:
 	AndroidMessageHandler();
 	static void handleMessage(String &message);
+	void sendMessage(AndroidMessage *message);
 };
 
 

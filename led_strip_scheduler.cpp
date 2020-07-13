@@ -6,11 +6,13 @@
 #include "led_state.h"
 #include "transition_led_state.h"
 #include "generator_cycler.h"
+#include "android_message_handler.h"
+#include "deserializer_handler.h"
 
 Scheduler *scheduler;
 GeneratorCycler *cycler;
 String recentMessage = "";
-
+AndroidMessageHandler *handler;
 
 int freeRAM() {
   extern int __heap_start, *__brkval;
@@ -59,6 +61,7 @@ void setup() {
 	//Sets up Scheduler and GeneratorCycler
 	scheduler = new Scheduler(strips, 2);
 	cycler = new GeneratorCycler(12, strips, 2);
+	handler = new AndroidMessageHandler();
 }
 
 void loop() {
@@ -71,10 +74,10 @@ void loop() {
 		delay(10);
 	}
 	if(recentMessage != ""){
-		if(recentMessage == "SER"){
-			Serial.println(scheduler->getStrip(0)->serialize());
-		} else if(recentMessage == "RAM"){
+		if(recentMessage == "RAM"){
 			Serial.println(freeRAM());
+		} else {
+			handler->handleMessage(recentMessage);
 		}
 		recentMessage = "";
 	}

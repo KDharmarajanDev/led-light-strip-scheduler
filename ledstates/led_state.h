@@ -10,6 +10,7 @@
 
 #include "color.h"
 #include <Arduino.h>
+#include "deserializer_handler.h"
 
 class LEDState {
 private:
@@ -25,6 +26,7 @@ public:
 	virtual Color getColor(long currentTime=0){
 		return color;
 	}
+	static LEDState* deserialize(String &input, struct indices &bounds);
 	virtual ~LEDState();
 	virtual String serialize();
 };

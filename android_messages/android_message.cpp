@@ -6,10 +6,9 @@
  */
 #include "android_message.h"
 
-AndroidMessage::AndroidMessage(String inputMessage) : message(inputMessage){
+AndroidMessage::AndroidMessage(){
 }
 
-String &AndroidMessage::getMessage(){
-	return message;
-}
+AndroidMessage::~AndroidMessage(){
 
+}

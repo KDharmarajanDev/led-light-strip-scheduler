@@ -22,8 +22,16 @@ void Scheduler::update(){
 	}
 }
 
+SMD5050LEDStrip** Scheduler::getStrips(){
+	return strips;
+}
+
 SMD5050LEDStrip* Scheduler::getStrip(int index){
 	return strips[index];
+}
+
+int Scheduler::getNumStrips(){
+	return numStrips;
 }
 
 Scheduler::Scheduler(const Scheduler& other){
@@ -32,6 +40,11 @@ Scheduler::Scheduler(const Scheduler& other){
 	for(int i = 0; i < numStrips; i++){
 		*strips[i] = *other.strips[i];
 	}
+}
+
+void Scheduler::setStrips(SMD5050LEDStrip **stripsInput, int numberStrips){
+	strips = stripsInput;
+	numStrips = numberStrips;
 }
 
 Scheduler& Scheduler::operator=(const Scheduler& other){

@@ -471,7 +471,7 @@ environment/project/io.sloeber.core.toolChain.release.539813522/JANTJE.BOARD_NAM
 environment/project/io.sloeber.core.toolChain.release.539813522/JANTJE.BOARD_NAME/value=Arduino Uno
 environment/project/io.sloeber.core.toolChain.release.539813522/JANTJE.COM_PORT/delimiter=\:
 environment/project/io.sloeber.core.toolChain.release.539813522/JANTJE.COM_PORT/operation=replace
-environment/project/io.sloeber.core.toolChain.release.539813522/JANTJE.COM_PORT/value=/dev/cu.usbmodem144101
+environment/project/io.sloeber.core.toolChain.release.539813522/JANTJE.COM_PORT/value=/dev/cu.usbmodem143101
 environment/project/io.sloeber.core.toolChain.release.539813522/JANTJE.ECLIPSE_LOCATION/delimiter=\:
 environment/project/io.sloeber.core.toolChain.release.539813522/JANTJE.ECLIPSE_LOCATION/operation=replace
 environment/project/io.sloeber.core.toolChain.release.539813522/JANTJE.ECLIPSE_LOCATION/value=

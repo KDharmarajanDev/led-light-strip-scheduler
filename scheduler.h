@@ -18,8 +18,11 @@ public:
 	Scheduler(SMD5050LEDStrip **ledStrips, int numStripsInput = 1);
 	void update();
 	SMD5050LEDStrip *getStrip(int index);
+	SMD5050LEDStrip **getStrips();
+	int getNumStrips();
 	Scheduler(const Scheduler& other);
 	Scheduler& operator=(const Scheduler& other);
+	void setStrips(SMD5050LEDStrip **strips, int numberStrips);
 	void destroy();
 	~Scheduler();
 };

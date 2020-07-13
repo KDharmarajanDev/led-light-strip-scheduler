@@ -8,12 +8,13 @@
 #ifndef SCHEDULER_LED_STATE_GENERATORS_SEQUENTIAL_GENERATOR_H_
 #define SCHEDULER_LED_STATE_GENERATORS_SEQUENTIAL_GENERATOR_H_
 
+#define maxStates 20
 #include "led_state.h"
 #include <Arduino.h>
+#include "deserializer_handler.h"
 
 class SequentialGenerator {
 private:
-	static const int maxStates = 20;
 	LEDState **states;
 	int currentStateIndex;
 	int endStateIndex;
@@ -33,6 +34,7 @@ public:
 	SequentialGenerator(const SequentialGenerator& other);
 	SequentialGenerator& operator=(const SequentialGenerator& other);
 	void destroy();
+	static SequentialGenerator* deserialize(String &input, struct indices &bounds);
 	virtual ~SequentialGenerator();
 	virtual String serialize();
 };

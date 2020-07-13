@@ -10,19 +10,26 @@
 
 #include <Arduino.h>
 
+struct indices {
+	int start;
+	int end;
+};
+
+extern struct indices example;
+
 class DeserializerHandler {
 
 private:
-	String &serializedRepresentation;
+	String serializedRepresentation;
 	int currentIndex;
+	struct indices bounds;
 
 public:
-	DeserializerHandler(String input) : serializedRepresentation(input), currentIndex(0){
+	DeserializerHandler(String &input, indices& bounds) : serializedRepresentation(input), currentIndex(bounds.start), bounds(bounds){
 	}
-
 	int getNextInteger();
-	String getNextItemInBrackets();
-
+	struct indices getNextItemInBrackets();
+	bool isAtEnd();
 };
 
 

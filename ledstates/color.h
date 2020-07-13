@@ -8,6 +8,7 @@
 #define COLOR_H_
 
 #include <Arduino.h>
+#include "deserializer_handler.h"
 
 class Color {
 private:
@@ -20,6 +21,7 @@ public:
     int getBlue() const { return blue; }
     int getGreen() const  { return green; }
     bool operator==(const Color& other);
+    static Color deserialize(String &input, struct indices &bounds);
     String serialize();
 };
 

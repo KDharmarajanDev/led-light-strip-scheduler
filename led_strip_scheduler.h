@@ -7,16 +7,13 @@
 #ifndef _led_strip_scheduler_H_
 #define _led_strip_scheduler_H_
 #include "Arduino.h"
-//add your includes for the project led_strip_scheduler here
+#include "scheduler.h"
+#include "android_message_handler.h"
+#include "generator_cycler.h"
 
-
-//end of add your includes here
-
-
-//add your function definitions for the project led_strip_scheduler here
-
-
-
+extern Scheduler *scheduler;
+extern AndroidMessageHandler *handler;
+extern GeneratorCycler *cycler;
 
 //Do not add code below this line
 #endif /* _led_strip_scheduler_H_ */

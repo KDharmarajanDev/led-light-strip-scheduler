@@ -11,15 +11,11 @@
 #include "Arduino.h"
 
 class AndroidMessage {
-
-private:
-	String message;
-
 public:
-	AndroidMessage(String inputMessage);
-	String &getMessage();
+	AndroidMessage();
 	virtual AndroidMessage* deserialize(String &other) = 0;
 	virtual void handle() = 0;
+	virtual String serialize() = 0;
 	virtual ~AndroidMessage();
 };
 

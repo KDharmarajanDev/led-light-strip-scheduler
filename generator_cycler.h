@@ -23,6 +23,7 @@ public:
 	GeneratorCycler(int buttonPin, SMD5050LEDStrip **strips, int numStrips);
 	void update();
 	~GeneratorCycler();
+	void setStrips(SMD5050LEDStrip **strips, int numStrips);
 };
 
 

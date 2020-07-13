@@ -29,6 +29,12 @@ void GeneratorCycler::update(){
 	}
 }
 
+void GeneratorCycler::setStrips(SMD5050LEDStrip **stripsInput, int numStripsInput){
+	strips = stripsInput;
+	numStrips = numStripsInput;
+	selectedStrip = 0;
+}
+
 GeneratorCycler::~GeneratorCycler(){
 	if(strips != nullptr){
 		for(int i = 0; i < numStrips; i++){
