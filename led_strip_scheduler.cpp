@@ -5,12 +5,10 @@
 #include "random_generator.h"
 #include "led_state.h"
 #include "transition_led_state.h"
-#include "generator_cycler.h"
 #include "android_message_handler.h"
 #include "deserializer_handler.h"
 
 Scheduler *scheduler;
-GeneratorCycler *cycler;
 String recentMessage = "";
 AndroidMessageHandler *handler;
 
@@ -43,12 +41,10 @@ void setup() {
 	//Second strip
 	LEDState *redState2 = new LEDState(redColor, 5000);
 	LEDState *whiteState2 = new LEDState(whiteColor,5000);
-	TransitionLEDState *transitionFromWhiteToBlue = new TransitionLEDState(whiteColor, blueColor, 5000);
-	LEDState **redWhiteTransitionBlue = new LEDState*[3];
+	LEDState **redWhiteTransitionBlue = new LEDState*[2];
 	redWhiteTransitionBlue[0] = redState2;
 	redWhiteTransitionBlue[1] = whiteState2;
-	redWhiteTransitionBlue[2] = transitionFromWhiteToBlue;
-	RandomGenerator *randomGen2 = new RandomGenerator(redWhiteTransitionBlue, 3, 0);
+	RandomGenerator *randomGen2 = new SequentialGenerator(redWhiteTransitionBlue, 2, 0);
 	SequentialGenerator **generatorsStripTwo = new SequentialGenerator*[1];
 	generatorsStripTwo[0] = randomGen2;
 	SMD5050LEDStrip *stripTwo = new SMD5050LEDStrip(6, 5, 3, generatorsStripTwo, 1);
@@ -60,14 +56,12 @@ void setup() {
 
 	//Sets up Scheduler and GeneratorCycler
 	scheduler = new Scheduler(strips, 2);
-	cycler = new GeneratorCycler(12, strips, 2);
 	handler = new AndroidMessageHandler();
 }
 
 void loop() {
 	if(scheduler != NULL){
 		scheduler->update();
-		cycler->update();
 	}
 	while(Serial.available()){
 		recentMessage += Serial.readString();
