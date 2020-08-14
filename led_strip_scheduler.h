@@ -9,11 +9,9 @@
 #include "Arduino.h"
 #include "scheduler.h"
 #include "android_message_handler.h"
-#include "generator_cycler.h"
 
 extern Scheduler *scheduler;
 extern AndroidMessageHandler *handler;
-extern GeneratorCycler *cycler;
 
 //Do not add code below this line
 #endif /* _led_strip_scheduler_H_ */

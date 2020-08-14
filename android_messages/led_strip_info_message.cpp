@@ -31,7 +31,6 @@ AndroidMessage* LEDStripInfoMessage::deserialize(String &other) {
 
 void LEDStripInfoMessage::handle(){
 	scheduler->setStrips(strips, numStrips);
-	cycler->setStrips(strips, numStrips);
 }
 
 SMD5050LEDStrip** LEDStripInfoMessage::getStrips() {
