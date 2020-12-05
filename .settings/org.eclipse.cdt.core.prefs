@@ -52,7 +52,7 @@ environment/project/io.sloeber.core.toolChain.release.1151749262/A.BUILD.MCU/ope
 environment/project/io.sloeber.core.toolChain.release.1151749262/A.BUILD.MCU/value=atmega328p
 environment/project/io.sloeber.core.toolChain.release.1151749262/A.BUILD.PATH/delimiter=\:
 environment/project/io.sloeber.core.toolChain.release.1151749262/A.BUILD.PATH/operation=replace
-environment/project/io.sloeber.core.toolChain.release.1151749262/A.BUILD.PATH/value=/Users/karthikdharmarajan/eclipse-workspace/led_light_strip_scheduler/Release
+environment/project/io.sloeber.core.toolChain.release.1151749262/A.BUILD.PATH/value=/Users/karthikdharmarajan/Documents/Arduino/led_light_strip_scheduler/Release
 environment/project/io.sloeber.core.toolChain.release.1151749262/A.BUILD.PROJECT_NAME/delimiter=\:
 environment/project/io.sloeber.core.toolChain.release.1151749262/A.BUILD.PROJECT_NAME/operation=replace
 environment/project/io.sloeber.core.toolChain.release.1151749262/A.BUILD.PROJECT_NAME/value=${ProjName}
@@ -466,10 +466,10 @@ environment/project/io.sloeber.core.toolChain.release.1151749262/JANTJE.BOARD_NA
 environment/project/io.sloeber.core.toolChain.release.1151749262/JANTJE.BOARD_NAME/value=Arduino Uno
 environment/project/io.sloeber.core.toolChain.release.1151749262/JANTJE.COM_PORT/delimiter=\:
 environment/project/io.sloeber.core.toolChain.release.1151749262/JANTJE.COM_PORT/operation=replace
-environment/project/io.sloeber.core.toolChain.release.1151749262/JANTJE.COM_PORT/value=/dev/cu.usbmodem143301
+environment/project/io.sloeber.core.toolChain.release.1151749262/JANTJE.COM_PORT/value=/dev/cu.usbmodem141301
 environment/project/io.sloeber.core.toolChain.release.1151749262/JANTJE.ECLIPSE_LOCATION/delimiter=\:
 environment/project/io.sloeber.core.toolChain.release.1151749262/JANTJE.ECLIPSE_LOCATION/operation=replace
-environment/project/io.sloeber.core.toolChain.release.1151749262/JANTJE.ECLIPSE_LOCATION/value=${eclipse_home}
+environment/project/io.sloeber.core.toolChain.release.1151749262/JANTJE.ECLIPSE_LOCATION/value=${eclipse_home}/////////////////////////////////////////////
 environment/project/io.sloeber.core.toolChain.release.1151749262/JANTJE.EXTRA.ALL/delimiter=\:
 environment/project/io.sloeber.core.toolChain.release.1151749262/JANTJE.EXTRA.ALL/operation=replace
 environment/project/io.sloeber.core.toolChain.release.1151749262/JANTJE.EXTRA.ALL/value=
